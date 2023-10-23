@@ -1,0 +1,16 @@
+.search {
+    &__logo {
+        position: absolute;
+        z-index: 99;
+        margin: 0.5rem;
+    }
+
+    &__input {
+        position: relative;
+        border-radius: 5px;
+        outline: none;
+        padding: 0.7rem 4rem;
+        background-color: #fafafa;
+        border: 1.5px solid #e1e1e1;
+    }
+}

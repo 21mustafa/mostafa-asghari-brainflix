@@ -1,0 +1,40 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/fonts" as *;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "AvenirNext LT Pro", sans-serif;
+    font-family: "AvenirNext LT Pro";
+    src:
+        url("AvenirNextLTPro-Bold.woff2") format("woff2"),
+        url("AvenirNextLTPro-Bold.woff") format("woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "AvenirNext LT Pro";
+    src:
+        url("AvenirNextLTPro-Bold.woff2") format("woff2"),
+        url("AvenirNextLTPro-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "AvenirNext LT Pro";
+    src:
+        url("AvenirNextLTPro-Regular.woff2") format("woff2"),
+        url("AvenirNextLTPro-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

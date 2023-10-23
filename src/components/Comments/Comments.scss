@@ -1,0 +1,69 @@
+.conversation {
+    &__photo {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__count {
+        font-size: 1.3rem;
+        margin-bottom: 1.6rem;
+    }
+
+    &__content {
+        display: flex;
+        border-bottom: 1px solid #e1e1e1;
+        margin-bottom: 1.6rem;
+    }
+
+    &__container-button {
+        background-color: #0095ff;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        height: 40px;
+        border-radius: 4px;
+        width: 100%;
+        padding: 1.5rem;
+        border: none;
+        margin: 1.6rem 0;
+    }
+
+    &__container-button-text {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-left: 2rem;
+    }
+
+    &__container {
+        margin-left: 1.5rem;
+        &-label {
+            color: #afafaf;
+        }
+
+        &-input {
+            border: 1.5px solid #e1e1e1;
+            border-radius: 5px;
+            background-color: #fafafa;
+            color: black;
+            width: calc(100% - 0.5rem);
+            padding-left: 0.5rem;
+            padding-top: 0.5rem;
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+.comment {
+    &__photo {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: #e1e1e1;
+    }
+
+    &__container {
+        flex-shrink: 18;
+    }
+}
