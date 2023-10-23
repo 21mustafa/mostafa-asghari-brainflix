@@ -56,6 +56,10 @@
 }
 
 .comment {
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 1rem;
+    display: flex;
+    margin-top: 1rem;
     &__photo {
         width: 3rem;
         height: 3rem;
@@ -65,5 +69,16 @@
 
     &__container {
         flex-shrink: 18;
+        margin-left: 1.6rem;
+    }
+
+    &__container-head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    &__container-head-right {
+        color: #afafaf;
     }
 }
