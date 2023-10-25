@@ -1,3 +1,5 @@
+@use "../../styles/partials/mixin" as *;
+
 .content {
     &__hero-video {
         width: 100%;
@@ -5,5 +7,17 @@
 
     &__main {
         padding: 0 1.6rem;
+
+        @include desktop {
+            display: flex;
+            padding: 0 3.6rem;
+        }
+
+        &-description {
+            @include desktop {
+                border-right: 1px solid #e1e1e1;
+                margin-right: 2rem;
+            }
+        }
     }
 }

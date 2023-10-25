@@ -41,19 +41,23 @@ function Comments(props) {
           <label className="conversation__container-label">
             JOIN THE CONVERSATION{" "}
           </label>
-          <textarea
-            className="conversation__container-input"
-            placeholder="Add a new comment"
-            rows={5}
-          />
-          <button className="conversation__container-button">
-            <img
-              className="conversation__container-img"
-              src={addComment}
-              alt="add comment"
-            />{" "}
-            <span className="conversation__container-button-text">COMMENT</span>
-          </button>
+          <div className="conversation__container-flex">
+            <textarea
+              className="conversation__container-input"
+              placeholder="Add a new comment"
+              rows={5}
+            />
+            <button className="conversation__container-button">
+              <img
+                className="conversation__container-img"
+                src={addComment}
+                alt="add comment"
+              />{" "}
+              <span className="conversation__container-button-text">
+                COMMENT
+              </span>
+            </button>
+          </div>
         </div>
       </div>
       {getComments()}

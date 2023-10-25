@@ -26,7 +26,7 @@ function Content() {
       </div>
 
       <div className="content__main">
-        <div>
+        <div className="content__main-description">
           <Description
             title={currentVideo.title}
             channel={currentVideo.channel}

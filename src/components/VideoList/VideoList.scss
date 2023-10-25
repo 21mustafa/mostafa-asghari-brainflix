@@ -1,7 +1,15 @@
+@use "../../styles/partials/mixin" as *;
+
 .videos {
     &__head {
         color: #afafaf;
         margin: 1rem 0;
+
+        @include tablet {
+            font-size: 1.4rem;
+            margin: 2.5rem 0;
+            font-weight: bold;
+        }
     }
 
     &__photo {
@@ -9,6 +17,12 @@
         height: 5rem;
         border-radius: 4px;
         object-fit: cover;
+
+        @include tablet {
+            width: 11rem;
+            height: 7rem;
+            margin-bottom: 1.5rem;
+        }
     }
 
     &__content {
@@ -23,11 +37,22 @@
     &__text-top {
         font-family: sans-serif;
         font-weight: 600;
+
+        @include tablet {
+            width: 15rem;
+            line-height: 1.5;
+            font-size: 1.2rem;
+            margin-bottom: 2.2rem;
+        }
     }
 
     &__text-bottom {
         margin-top: 1rem;
         font-weight: 400;
         font-family: sans-serif;
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
     }
 }

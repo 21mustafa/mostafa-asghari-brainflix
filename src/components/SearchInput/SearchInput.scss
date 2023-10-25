@@ -1,3 +1,5 @@
+@use "../../styles/partials/mixin" as *;
+
 .search {
     &__logo {
         position: absolute;
@@ -12,5 +14,11 @@
         padding: 0.7rem 4rem;
         background-color: #fafafa;
         border: 1.5px solid #e1e1e1;
+
+        @include tablet {
+            max-width: 6rem;
+            padding: 0.65rem 2rem;
+            margin-right: 1rem;
+        }
     }
 }

@@ -1,3 +1,5 @@
+@use "../../styles/partials/mixin" as *;
+
 .conversation {
     &__photo {
         width: 4rem;
@@ -9,12 +11,20 @@
     &__count {
         font-size: 1.3rem;
         margin-bottom: 1.6rem;
+
+        @include tablet {
+            font-size: 1.6rem;
+        }
     }
 
     &__content {
         display: flex;
         border-bottom: 1px solid #e1e1e1;
         margin-bottom: 1.6rem;
+        @include tablet {
+            width: 100%;
+            align-items: center;
+        }
     }
 
     &__container-button {
@@ -28,18 +38,44 @@
         padding: 1.5rem;
         border: none;
         margin: 1.6rem 0;
+
+        @include tablet {
+            max-width: 13rem;
+            margin-left: 2rem;
+            margin-top: 0.5rem;
+            height: 2.75rem;
+            padding: 0;
+            padding-left: 1.5rem;
+        }
     }
 
     &__container-button-text {
         font-size: 1rem;
         font-weight: 500;
         margin-left: 2rem;
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
     }
 
     &__container {
         margin-left: 1.5rem;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include desktop {
+            margin-right: 1rem;
+        }
+
         &-label {
             color: #afafaf;
+
+            @include tablet {
+                font-size: 1.2rem;
+            }
         }
 
         &-input {
@@ -51,6 +87,16 @@
             padding-left: 0.5rem;
             padding-top: 0.5rem;
             margin-top: 0.5rem;
+
+            @include tablet {
+                font-size: 1.2rem;
+                max-height: 2rem;
+            }
+        }
+    }
+    &__container-flex {
+        @include tablet {
+            display: flex;
         }
     }
 }
@@ -65,11 +111,20 @@
         height: 3rem;
         border-radius: 50%;
         background-color: #e1e1e1;
+
+        @include tablet {
+            width: 4rem;
+            height: 4rem;
+        }
     }
 
     &__container {
         flex-shrink: 18;
         margin-left: 1.6rem;
+
+        @include desktop {
+            padding-right: 1.5rem;
+        }
     }
 
     &__container-head {
@@ -80,5 +135,23 @@
 
     &__container-head-right {
         color: #afafaf;
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__container-head-left {
+        @include tablet {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+    }
+
+    &__text {
+        @include tablet {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
     }
 }

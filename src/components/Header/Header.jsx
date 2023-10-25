@@ -12,7 +12,7 @@ function Header(props) {
         <img src={logo} alt="brainFlix Logo"></img>
       </div>
 
-      <div>
+      <div className="header__container">
         <div className="header__search-section">
           <SearchInput />
           <img
