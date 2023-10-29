@@ -4,11 +4,19 @@ import SearchInput from "../SearchInput/SearchInput";
 import profilePhoto from "../../assets/images/Mohan-muruge.jpg";
 import uploadPhoto from "../../assets/images/Icons/upload.svg";
 import "./Header.scss";
+import { useNavigate } from "react-router-dom";
 
 function Header(props) {
+  const navigate = useNavigate();
+
   return (
     <header className="header">
-      <div className="header__logo">
+      <div
+        onClick={() => {
+          navigate("/");
+        }}
+        className="header__logo"
+      >
         <img src={logo} alt="brainFlix Logo"></img>
       </div>
 
@@ -21,7 +29,11 @@ function Header(props) {
             alt="profile Photo"
           />
         </div>
-        <button>
+        <button
+          onClick={() => {
+            navigate("/upload-video");
+          }}
+        >
           <img src={uploadPhoto} alt="upload Photo" />
           <span>UPLOAD</span>
         </button>

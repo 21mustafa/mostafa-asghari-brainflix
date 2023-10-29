@@ -1,21 +1,24 @@
 import React from "react";
-import videos from "../../data/videos.json";
 import "./VideoList.scss";
+import { useNavigate, useParams } from "react-router-dom";
 
 function VideoList(props) {
+  const navigate = useNavigate();
+  const params = useParams();
+  const currentVideoId = params.id ? params.id : props.videos[0].id;
   return (
     <div className="videos">
       <div className="videos__head">NEXT VIDEOS</div>
       <div className="videos__container">
-        {videos
+        {props.videos
           .filter((item) => {
-            return item.id !== props.currentVideoId;
+            return item.id !== currentVideoId;
           })
           .map((item) => {
             return (
               <div
                 onClick={() => {
-                  props.onVideoChange(item.id);
+                  navigate(`/videos/${item.id}`);
                 }}
               >
                 <div className="videos__content">

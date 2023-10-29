@@ -1,24 +1,34 @@
-import React, { useState } from "react";
-import videoDetails from "../../data/video-details.json";
+import React, { useEffect, useState } from "react";
+
 import Description from "../Description/Description";
 import Comments from "../Comments/Comments";
 import VideoList from "../VideoList/VideoList";
 import "./Content.scss";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
-function Content() {
-  const [currentVideo, setCurrentVideo] = useState(videoDetails[0]);
-  const onVideoChange = (id) => {
-    const newVideo = videoDetails.find((item) => {
-      return item.id === id;
-    });
-    setCurrentVideo(newVideo);
-  };
+function Content(props) {
+  const params = useParams();
 
-  return (
+  const [video, setVideo] = useState();
+  useEffect(() => {
+    const id = props.currentVideo ? props.currentVideo.id : params.id;
+    window.scrollTo(0, 0);
+    axios
+      .get(`/videos/${id}?api_key=470d576e-c1d5-4cbb-812a-64aec538f10a`)
+      .then((response) => {
+        setVideo(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [props.currentVideo, params.id]);
+
+  return video ? (
     <div className="content">
       <div className="content__video">
         <video
-          poster={currentVideo.image}
+          poster={video.image}
           alt="Now Playing Video"
           className="content__hero-video"
           controls
@@ -28,23 +38,21 @@ function Content() {
       <div className="content__main">
         <div className="content__main-description">
           <Description
-            title={currentVideo.title}
-            channel={currentVideo.channel}
-            timestamp={currentVideo.timestamp}
-            views={currentVideo.views}
-            likes={currentVideo.likes}
-            description={currentVideo.description}
+            title={video.title}
+            channel={video.channel}
+            timestamp={video.timestamp}
+            views={video.views}
+            likes={video.likes}
+            description={video.description}
           />
 
-          <Comments comments={currentVideo.comments} />
+          <Comments comments={video.comments} />
         </div>
-
-        <VideoList
-          onVideoChange={onVideoChange}
-          currentVideoId={currentVideo.id}
-        />
+        <VideoList videos={props.videos} />
       </div>
     </div>
+  ) : (
+    <div>Loading...</div>
   );
 }
 
