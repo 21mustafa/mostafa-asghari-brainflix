@@ -1,0 +1,150 @@
+@use "../../styles/partials/mixin" as *;
+
+.upload {
+    border-top: 1px solid #e1e1e1;
+    padding: 0 1.6rem;
+    @include tablet {
+        padding: 0 2.4rem;
+    }
+
+    &__head {
+        @include tablet {
+            border-bottom: 1px solid #e1e1e1;
+        }
+    }
+
+    &__input {
+        @include tablet {
+            margin-top: 2rem;
+        }
+    }
+
+    &__input-img {
+        width: 100%;
+        margin: 0.5rem 0 1.2rem 0;
+        border-radius: 5px;
+    }
+
+    &__input-label {
+        color: #afafaf;
+    }
+
+    &__input-maintop {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input-mainbottom {
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            border-bottom: 1px solid #e1e1e1;
+        }
+    }
+
+    &__input-text {
+        border: 1.5px solid #e1e1e1;
+        border-radius: 5px;
+        background-color: #fafafa;
+        color: black;
+        width: calc(100% - 0.5rem);
+        padding-left: 0.5rem;
+        margin-top: 0.5rem;
+        height: 2.5rem;
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__input-textarea {
+        border: 1.5px solid #e1e1e1;
+        border-radius: 5px;
+        background-color: #fafafa;
+        color: black;
+        width: calc(100% - 0.5rem);
+        padding-left: 0.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.button {
+    @include tablet {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 2rem;
+    }
+
+    &__publish {
+        background-color: #0095ff;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        height: 40px;
+        border-radius: 4px;
+        width: 100%;
+        padding: 1.5rem;
+        border: none;
+
+        @include tablet {
+            width: 11rem;
+            padding: 0.5rem;
+        }
+
+        img {
+            max-width: 24px;
+            margin-right: 10px;
+            position: absolute;
+        }
+
+        span {
+            flex: 1;
+            text-align: center;
+
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        &:hover {
+            background-color: #0065ad;
+        }
+    }
+
+    &__cancel {
+        background-color: #ffffff;
+        color: #0095ff;
+        display: flex;
+        align-items: center;
+        height: 40px;
+        border-radius: 4px;
+        width: 100%;
+        padding: 1.5rem;
+        border: none;
+
+        @include tablet {
+            width: 11rem;
+            padding: 0.5rem;
+        }
+
+        img {
+            max-width: 24px;
+            margin-right: 10px;
+            padding: 0 10px;
+        }
+
+        span {
+            flex: 1;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
+}

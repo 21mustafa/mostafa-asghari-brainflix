@@ -60,15 +60,15 @@
     }
 
     &__mobile-container {
-        display: flex; // Use flexbox to place items side by side for mobile
-        align-items: center; // Align items vertically
+        display: flex;
+        align-items: center;
 
         &__search-section {
             flex: 1;
         }
 
         &__photo-mobile {
-            margin-left: 16px; // Add left margin to separate the search input and photo
+            margin-left: 16px;
         }
     }
 
@@ -79,13 +79,12 @@
         }
     }
 
-    // Flex container for mobile
     &__mobile-container {
-        display: flex; // Use flexbox to place items side by side for mobile
-        align-items: center; // Align items vertically
+        display: flex;
+        align-items: center;
 
         &__search-section {
-            flex: 1; // Allow the search section to grow and take available space
+            flex: 1;
         }
     }
 
@@ -106,60 +105,50 @@
         }
 
         img {
-            max-width: 24px; // Adjust the image size as needed
-            margin-right: 10px; // Add spacing between the image and text
-            padding: 0 10px; // Add horizontal padding to the image
+            max-width: 24px;
+            margin-right: 10px;
         }
 
         span {
-            flex: 1;
+            flex: 0.8;
             text-align: center;
-            padding: 0 10px;
             font-size: 1rem;
             font-weight: 500;
         }
 
-        // Hover effect for the button
         &:hover {
             background-color: #0065ad;
         }
     }
 
-    // Media query for tablets (min-width: 769px)
     @media screen and (min-width: 769px) {
         .header {
-            // Padding for tablets
-            padding: 0 24px; // Adjust the padding for tablets
-            margin-bottom: 24px; // Add 24px margin to the bottom for tablets
+            padding: 0 24px;
+            margin-bottom: 24px;
         }
 
         &__photo-mobile {
-            // Adjust styles for tablets
         }
 
-        // Button styles for tablets
         button {
-            min-width: 150px; // Minimum width for tablets
-            padding: 0 32px; // Minimum padding for tablets
-            width: auto; // Reset width to auto for tablets
-            border: none; // Remove borders
+            min-width: 150px;
+            padding: 0 32px;
+            width: auto;
+            border: none;
         }
     }
 
-    // Media query for desktops (min-width: 1281px)
     @media screen and (min-width: 1281px) {
         .header {
-            // Padding for desktops
-            padding: 0 24px; // Adjust the padding for desktops
-            margin-bottom: 24px; // Add 24px margin to the bottom for desktops
+            padding: 0 24px;
+            margin-bottom: 24px;
         }
 
-        // Button styles for desktop
         button {
-            min-width: 150px; // Minimum width for desktop
-            padding: 0 32px; // Minimum padding for desktop
-            width: auto; // Reset width to auto for desktop
-            border: none; // Remove borders
+            min-width: 150px;
+            padding: 0 32px;
+            width: auto;
+            border: none;
         }
     }
 }
