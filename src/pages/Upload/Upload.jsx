@@ -18,23 +18,25 @@ function Upload(props) {
             <label className="upload__input-label">VIDEO THUMBNAIL</label>
             <img className="upload__input-img" src={upload} alt="upload" />
           </div>
-          <div className="upload__input-maintop">
-            <label className="upload__input-label">TITLE YOUR VIDEO</label>
-            <input
-              className="upload__input-text"
-              type="text"
-              placeholder="Add a title to your video"
-            />
-          </div>
-          <div className="upload__input-mainbottom">
-            <label className="upload__input-label">
-              ADD A VIDEO DESCRIPTION
-            </label>
-            <textarea
-              className="upload__input-textarea"
-              rows="5"
-              placeholder="Add a description to your video"
-            />
+          <div className="upload__input-main">
+            <div className="upload__input-maintop">
+              <label className="upload__input-label">TITLE YOUR VIDEO</label>
+              <input
+                className="upload__input-text"
+                type="text"
+                placeholder="Add a title to your video"
+              />
+            </div>
+            <div className="upload__input-mainbottom">
+              <label className="upload__input-label">
+                ADD A VIDEO DESCRIPTION
+              </label>
+              <textarea
+                className="upload__input-textarea"
+                rows="6"
+                placeholder="Add a description to your video"
+              />
+            </div>
           </div>
         </div>
 
