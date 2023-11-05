@@ -5,12 +5,12 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import VideoList from "./components/VideoList/VideoList";
 import Upload from "./pages/Upload/Upload";
-axios.defaults.baseURL = "https://project-2-api.herokuapp.com/";
+axios.defaults.baseURL = "http://localhost:8000/";
 function App() {
   const [videos, setVideos] = useState([]);
   useEffect(() => {
     axios
-      .get("/videos?api_key=470d576e-c1d5-4cbb-812a-64aec538f10a")
+      .get("/videos")
       .then((response) => {
         setVideos(response.data);
       })

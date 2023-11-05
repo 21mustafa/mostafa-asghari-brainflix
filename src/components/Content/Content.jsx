@@ -15,7 +15,7 @@ function Content(props) {
     const id = props.currentVideo ? props.currentVideo.id : params.id;
     window.scrollTo(0, 0);
     axios
-      .get(`/videos/${id}?api_key=470d576e-c1d5-4cbb-812a-64aec538f10a`)
+      .get(`/videos/${id}`)
       .then((response) => {
         setVideo(response.data);
       })
