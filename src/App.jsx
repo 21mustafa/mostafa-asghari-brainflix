@@ -9,6 +9,10 @@ axios.defaults.baseURL = "http://localhost:8000/";
 function App() {
   const [videos, setVideos] = useState([]);
   useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = () => {
     axios
       .get("/videos")
       .then((response) => {
@@ -17,7 +21,7 @@ function App() {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  };
 
   return (
     <>
@@ -31,7 +35,10 @@ function App() {
               element={<Content currentVideo={videos[0]} videos={videos} />}
             />
             <Route path="/videos/:id" element={<Content videos={videos} />} />
-            <Route path="/upload-video" element={<Upload />} />
+            <Route
+              path="/upload-video"
+              element={<Upload onSubmit={fetchData} />}
+            />
           </Routes>
         ) : (
           <div>Loading...</div>
